@@ -1,0 +1,401 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>穿戴甲接單前必修的28問｜簡章</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif+TC:wght@500;700;900&family=Noto+Sans+TC:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --ink:#211d1a;
+    --ink-soft:#5c5650;
+    --paper:#f4efe3;
+    --paper-deep:#e9e0cd;
+    --navy:#3d4a35;
+    --navy-deep:#262f22;
+    --brass:#a9822f;
+    --brass-light:#e4c988;
+    --rust:#96702f;
+    --line:rgba(33,29,26,0.14);
+  }
+  *{box-sizing:border-box;}
+  html{scroll-behavior:smooth;}
+  body{
+    margin:0;
+    background:var(--paper);
+    color:var(--ink);
+    font-family:'Noto Sans TC', sans-serif;
+    line-height:1.8;
+    -webkit-font-smoothing:antialiased;
+    padding-bottom:0;
+  }
+  h1,h2,h3,.serif{
+    font-family:'Noto Serif TC', serif;
+    font-weight:900;
+    line-height:1.4;
+    margin:0;
+  }
+  p{margin:0;}
+  .wrap{max-width:900px; margin:0 auto; padding:0 28px;}
+  .eyebrow{
+    display:inline-flex; align-items:center; gap:10px;
+    font-size:13px; letter-spacing:.16em; color:var(--brass);
+    font-weight:700; margin-bottom:18px;
+  }
+  .eyebrow::before{content:""; width:22px; height:1px; background:var(--brass); display:inline-block;}
+  .eyebrow.on-dark{color:var(--brass-light);}
+  .eyebrow.on-dark::before{background:var(--brass-light);}
+
+  .divider{display:flex; justify-content:center; align-items:center; gap:12px; padding:40px 0;}
+  .divider .rule{width:60px; height:1px; background:var(--line);}
+  .divider .tag{
+    font-family:'Noto Serif TC', serif; font-weight:700; font-size:12px;
+    color:var(--brass); letter-spacing:.12em; border:1px solid var(--line);
+    padding:4px 10px;
+  }
+
+  /* ---------- HERO ---------- */
+  .hero{padding:88px 0 56px;}
+  .hero h1{font-size:clamp(28px,4.6vw,42px); max-width:12em;}
+  .hero .sub{margin-top:24px; max-width:560px; font-size:16.5px; color:var(--ink-soft);}
+  .cta-row{margin-top:34px; display:flex; align-items:center; gap:18px; flex-wrap:wrap;}
+  .btn{
+    display:inline-block; background:var(--navy); color:var(--paper);
+    font-weight:700; font-size:15.5px; padding:15px 32px; text-decoration:none;
+    border:1px solid var(--navy); letter-spacing:.02em; transition:transform .15s ease, background .15s ease;
+  }
+  .btn:hover{background:var(--navy-deep); transform:translateY(-1px);}
+  .btn.brass{background:var(--brass); border-color:var(--brass); color:var(--navy-deep);}
+  .btn.brass:hover{background:#c29a49;}
+  .fact-row{margin-top:22px; font-size:14px; color:var(--ink-soft); letter-spacing:.01em;}
+  .hero-instructor{margin-top:26px; font-size:13.5px; color:var(--ink-soft); border-top:1px solid var(--line); padding-top:18px;}
+
+  /* ---------- PROBLEM / FIT (merged) ---------- */
+  .audience{padding:36px 0 16px;}
+  .pain-grid{margin-top:6px; display:grid; grid-template-columns:1fr 1fr; gap:12px;}
+  .fit-lead{margin-top:24px; font-size:15.5px; color:var(--ink); font-weight:700; max-width:560px;}
+  .aud-note.standalone{margin-top:16px; font-size:13.5px; color:var(--ink-soft); border-top:1px dashed var(--line); padding-top:16px; max-width:600px;}
+  .pain-item{
+    font-size:14.5px; color:var(--ink); padding:16px 18px; background:#fbf7ec; border-left:3px solid var(--rust);
+  }
+
+  /* ---------- CURRICULUM (ledger, signature) ---------- */
+  .curriculum{background:var(--navy-deep); color:#ece4d3; padding:64px 0 60px;}
+  .curriculum h2{color:#fff; font-size:clamp(22px,3.2vw,28px); max-width:12em;}
+  .curriculum-intro{margin-top:18px; font-size:14.5px; color:#c9bfa4; max-width:560px;}
+  .outline-row{display:flex; gap:22px; padding:22px 0; border-top:1px solid rgba(236,228,211,0.14);}
+  .outline-row:last-child{border-bottom:1px solid rgba(236,228,211,0.14);}
+  .outline-num{
+    font-family:'Noto Serif TC', serif; font-weight:900; font-size:30px; color:var(--brass-light);
+    width:48px; flex-shrink:0;
+  }
+  .outline-body .t{font-size:15.5px; font-weight:700; color:#fff;}
+  .outline-body .d{font-size:13.5px; color:#c9bfa4; margin-top:6px;}
+
+  /* ---------- FAQ ---------- */
+  .faq-section{padding:52px 0;}
+  .faq-section h2{font-size:clamp(22px,3.2vw,28px); margin-bottom:26px;}
+  .faq details{border-top:1px solid var(--line); padding:16px 0;}
+  .faq details:last-child{border-bottom:1px solid var(--line);}
+  .faq summary{
+    cursor:pointer; font-weight:700; font-size:15px; color:var(--ink); list-style:none;
+    display:flex; justify-content:space-between; align-items:center; gap:16px;
+  }
+  .faq summary::-webkit-details-marker{display:none;}
+  .faq summary::after{content:"+"; color:var(--brass); font-size:18px; flex-shrink:0;}
+  .faq details[open] summary::after{content:"–";}
+  .faq .a{margin-top:12px; font-size:14px; color:var(--ink-soft); line-height:1.8;}
+
+  /* ---------- ENROLL / PRICE ---------- */
+  .enroll{background:var(--navy); color:var(--paper); padding:64px 0 70px; margin-top:20px;}
+  .enroll .eyebrow{color:var(--brass-light);}
+  .enroll .eyebrow::before{background:var(--brass-light);}
+  .enroll h2{color:#fff; font-size:clamp(22px,3.2vw,28px);}
+  .price-block{margin-top:22px; display:flex; align-items:baseline; gap:12px; flex-wrap:wrap;}
+  .price-amount{font-family:'Noto Serif TC', serif; font-weight:900; font-size:44px; color:#fff;}
+  .price-sub{font-size:14px; color:#c9bfa4;}
+  .price-desc{margin-top:8px; font-size:14px; color:#c9bfa4;}
+
+  .step-block{margin-top:32px;}
+  .step-label{
+    font-family:'Noto Serif TC', serif; font-weight:700; font-size:15px;
+    color:var(--brass-light); letter-spacing:.03em; margin-bottom:14px;
+  }
+  .step-desc{font-size:14px; color:#c9bfa4; margin-bottom:16px;}
+
+  .pay-card{
+    margin-top:0; background:rgba(244,239,227,0.06); border:1px solid rgba(244,239,227,0.16);
+    padding:24px 22px;
+  }
+  .pay-row{display:flex; justify-content:space-between; align-items:center; gap:14px; padding:10px 0; border-bottom:1px solid rgba(244,239,227,0.12);}
+  .pay-row:last-child{border-bottom:none;}
+  .pay-label{font-size:13px; color:#c9bfa4;}
+  .pay-value{font-size:15px; font-weight:700; color:#fff; letter-spacing:.02em;}
+  .copy-btn{
+    background:transparent; border:1px solid var(--brass-light); color:var(--brass-light);
+    font-size:12px; padding:6px 12px; cursor:pointer; font-family:'Noto Sans TC', sans-serif;
+    transition:background .15s ease, color .15s ease;
+  }
+  .copy-btn:hover{background:var(--brass-light); color:var(--navy-deep);}
+  .copy-btn.copied{background:var(--brass-light); color:var(--navy-deep);}
+
+  .format-box{
+    margin-top:18px; background:rgba(0,0,0,0.18); padding:18px 18px; font-size:13.5px;
+    color:#e7ddc4; line-height:2; white-space:pre-line;
+  }
+  .enroll-cta{margin-top:28px; display:flex; align-items:center; gap:16px; flex-wrap:wrap;}
+  .enroll-note{margin-top:14px; font-size:12.5px; color:#a99a84;}
+
+  /* ---------- FINAL ---------- */
+  .final-cta{text-align:center; padding:70px 0 100px;}
+  .final-cta h2{font-size:clamp(20px,3vw,26px); max-width:14em; margin:0 auto;}
+  .final-cta .btn{margin-top:26px;}
+
+  /* sticky mobile bar */
+  .sticky-bar{
+    position:fixed; left:0; right:0; bottom:0; background:var(--navy-deep); color:var(--paper);
+    padding:14px 20px; display:none; align-items:center; justify-content:space-between; gap:14px;
+    z-index:50; transform:translateY(100%); transition:transform .25s ease;
+  }
+  .sticky-bar.show{transform:translateY(0);}
+  .sticky-bar .price{font-size:14px; font-weight:700;}
+  .sticky-bar .price span{display:block; font-size:11px; font-weight:400; color:#c9bfa4;}
+  .sticky-bar a.btn{padding:10px 20px; font-size:14px; background:var(--brass); border-color:var(--brass); color:var(--navy-deep);}
+
+  footer{text-align:center; font-size:12px; color:var(--ink-soft); padding:26px 0 90px;}
+
+  @media (max-width:760px){
+    body{font-size:16px; padding-bottom:76px;}
+    .wrap{padding:0 20px;}
+    .pain-grid{grid-template-columns:1fr;}
+    .hero{padding:56px 0 40px;}
+    .hero h1{font-size:26px;}
+    .hero .sub{font-size:15.5px;}
+    .fact-row{font-size:13.5px;}
+    .cta-row{flex-direction:column; align-items:stretch; gap:14px; margin-top:26px;}
+    .btn{display:block; width:100%; text-align:center; padding:16px 20px; font-size:16px;}
+
+    .audience h2, .curriculum h2, .faq-section h2, .enroll h2{font-size:22px;}
+    .pain-item{font-size:14px;}
+    .fit-lead{font-size:14.5px;}
+
+    .curriculum{padding:48px 0 52px;}
+    .outline-row{gap:16px; padding:18px 0;}
+    .outline-num{font-size:24px; width:38px;}
+    .outline-body .t{font-size:15px;}
+
+    .price-amount{font-size:36px;}
+    .pay-card{padding:20px 16px;}
+    .pay-row{flex-direction:column; align-items:flex-start; gap:6px;}
+    .format-box{font-size:13px;}
+    .enroll-cta .btn{width:100%; text-align:center;}
+
+    .sticky-bar{display:flex; padding:12px 16px; padding-bottom:calc(12px + env(safe-area-inset-bottom));}
+    .sticky-bar a.btn{width:auto; padding:11px 20px;}
+  }
+</style>
+</head>
+<body>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="wrap">
+    <div class="eyebrow">穿戴甲接單前必修的28問</div>
+    <h1>會做穿戴甲，卻還不知道<br>什麼時候可以開始賣？怎麼定價？<br>尺寸、客訴怎麼處理？</h1>
+    <p class="sub">用 28 個接單前最常遇到的問題，一次建立從「會做」到「開始接單」需要的基本判斷。</p>
+    <div class="fact-row">線上錄播｜約 1 小時｜永久觀看｜附課程簡報</div>
+    <div class="cta-row">
+      <a href="#enroll" class="btn">查看報名方式</a>
+    </div>
+    <p class="hero-instructor">Laina｜DUMO 創辦人｜3+ 年穿戴甲創作經驗</p>
+  </div>
+</section>
+
+<!-- PROBLEM / FIT -->
+<section class="audience">
+  <div class="wrap">
+    <div class="eyebrow">如果你現在卡在這些問題</div>
+    <div class="pain-grid">
+      <div class="pain-item">「作品做到什麼程度才能賣？」</div>
+      <div class="pain-item">「價格到底怎麼訂？」</div>
+      <div class="pain-item">「尺寸、公版、客製、1:1 到底怎麼分？」</div>
+      <div class="pain-item">「遇到客訴、售後該怎麼處理？」</div>
+    </div>
+    <p class="fit-lead">這堂課會幫你建立一套接單前的基本判斷，讓你知道每一步該先想清楚什麼。</p>
+    <div class="aud-note standalone">適合剛開始接觸穿戴甲，或已經會製作、但還沒有完整接單流程的人。本課程以「接單與經營觀念」為主，不是美甲技術實作課。</div>
+  </div>
+</section>
+
+<div class="wrap"><div class="divider"><span class="rule"></span><span class="tag">28Q</span><span class="rule"></span></div></div>
+
+<!-- CURRICULUM -->
+<section class="curriculum">
+  <div class="wrap">
+    <div class="eyebrow on-dark">課程大綱</div>
+    <h2>6 大章節，建立接單前完整地圖</h2>
+    <p class="curriculum-intro">開始前：妳不是只在學做款式——有了作品之後，妳真正要面對的是什麼？</p>
+
+    <div class="outline-row">
+      <div class="outline-num">1</div>
+      <div class="outline-body"><div class="t">接單前判斷</div><div class="d">作品做到什麼程度可以開始賣？</div></div>
+    </div>
+    <div class="outline-row">
+      <div class="outline-num">2</div>
+      <div class="outline-body"><div class="t">定價與販售</div><div class="d">建立自己的定價邏輯</div></div>
+    </div>
+    <div class="outline-row">
+      <div class="outline-num">3</div>
+      <div class="outline-body"><div class="t">尺寸與客製</div><div class="d">降低尺寸與溝通問題</div></div>
+    </div>
+    <div class="outline-row">
+      <div class="outline-num">4</div>
+      <div class="outline-body"><div class="t">售後與客訴</div><div class="d">在出問題前先建立規則</div></div>
+    </div>
+    <div class="outline-row">
+      <div class="outline-num">5</div>
+      <div class="outline-body"><div class="t">開始接單後的現實問題</div><div class="d">處理真正開始賣之後會遇到的狀況</div></div>
+    </div>
+    <div class="outline-row">
+      <div class="outline-num">6</div>
+      <div class="outline-body"><div class="t">材料、工期與產能</div><div class="d">訂單增加後如何安排製作</div></div>
+    </div>
+  </div>
+</section>
+
+<!-- FAQ -->
+<section class="faq-section">
+  <div class="wrap">
+    <div class="eyebrow">常見問題</div>
+    <h2>FAQ</h2>
+    <div class="faq">
+      <details open>
+        <summary>這堂課是教技術嗎？</summary>
+        <p class="a">這堂課不是高階實作技術課。內容主要是接單前的入門整理，包含尺寸、定價、客人溝通與售後問題。</p>
+      </details>
+      <details>
+        <summary>完全新手可以看嗎？</summary>
+        <p class="a">可以！這堂課適合剛開始接觸穿戴甲，或是準備開始接單前的人。</p>
+      </details>
+      <details>
+        <summary>已經有在做穿戴甲，還適合嗎？</summary>
+        <p class="a">適合，尤其是對接單流程、尺寸、定價、客人溝通還不太穩定的話。</p>
+      </details>
+      <details>
+        <summary>看完可以馬上開始接單嗎？</summary>
+        <p class="a">這堂課不會保證妳看完就能立刻穩定接單，但可以幫助妳建立接單前的判斷力與觀念。</p>
+      </details>
+      <details>
+        <summary>何時會收到錄播課程影片？</summary>
+        <p class="a">完成匯款後，我們會於 24 小時內核對您的付款與報名資料。確認完成後，課程影片連結將透過 Gmail 寄送至您填寫的信箱。</p>
+      </details>
+      <details>
+        <summary>這堂課跟實體進階班差在哪？</summary>
+        <p class="a">28問是接單與品牌經營的觀念整理；進階班則是實體技術課，學習如何做出輕薄服貼的穿戴甲製作技術。</p>
+      </details>
+    </div>
+  </div>
+</section>
+
+<!-- ENROLL / PRICE -->
+<section class="enroll" id="enroll">
+  <div class="wrap">
+    <div class="eyebrow">報名方式</div>
+    <h2>28問｜報名方式</h2>
+    <div class="price-block">
+      <div class="price-amount">NT$3,280</div>
+      <div class="price-sub">課程價格</div>
+    </div>
+    <p class="price-desc">線上錄播・永久觀看</p>
+
+    <div class="step-block">
+      <div class="step-label">STEP 1｜完成銀行轉帳</div>
+      <div class="pay-card">
+        <div class="pay-row">
+          <div><div class="pay-label">銀行</div><div class="pay-value">連線商業銀行（824）</div></div>
+        </div>
+        <div class="pay-row">
+          <div><div class="pay-label">帳號</div><div class="pay-value" id="acctNum">111017943355</div></div>
+          <button class="copy-btn" id="copyAcct" onclick="copyText('111017943355', 'copyAcct')">複製帳號</button>
+        </div>
+        <div class="pay-row">
+          <div><div class="pay-label">金額</div><div class="pay-value">NT$3,280</div></div>
+        </div>
+      </div>
+    </div>
+
+    <div class="step-block">
+      <div class="step-label">STEP 2｜複製以下資料</div>
+      <div class="pay-card">
+        <div class="format-box" id="formatBox">真實姓名：
+聯絡電話：
+Gmail：
+美甲 IG：
+匯款後五碼：</div>
+        <div style="margin-top:12px;">
+          <button class="copy-btn" id="copyFormat" onclick="copyFormat()">複製回傳格式</button>
+        </div>
+      </div>
+    </div>
+
+    <div class="step-block">
+      <div class="step-label">STEP 3｜回傳至 RVEA 官方 LINE</div>
+      <p class="step-desc">完成匯款後，將以上資料傳至官方 LINE。</p>
+      <div class="enroll-cta">
+        <a href="https://line.me/R/ti/p/@998uuoof" target="_blank" rel="noopener" class="btn brass">前往 RVEA 官方 LINE</a>
+      </div>
+    </div>
+
+    <p class="enroll-note">我們確認款項後，會提供後續課程觀看資訊。確認款項後 24 小時內，會將課程觀看方式傳送至你的 Gmail。</p>
+    <p class="enroll-note" style="margin-top:4px;">完成以上 3 步，即完成報名。</p>
+  </div>
+</section>
+
+<!-- FINAL -->
+<section class="final-cta">
+  <div class="wrap">
+    <h2>先把地圖畫好，再開始上路。</h2>
+    <a href="#enroll" class="btn">查看報名方式</a>
+  </div>
+</section>
+
+<footer>© 穿戴甲接單前必修的28問 · RVEA</footer>
+
+<!-- sticky mobile CTA -->
+<div class="sticky-bar" id="stickyBar">
+  <div class="price">NT$3,280<span>線上錄播・永久回看</span></div>
+  <a href="#enroll" class="btn brass">查看報名</a>
+</div>
+
+<script>
+  const bar = document.getElementById('stickyBar');
+  const hero = document.querySelector('.hero');
+  const io = new IntersectionObserver((entries)=>{
+    entries.forEach(e=>{
+      if(!e.isIntersecting){ bar.classList.add('show'); }
+      else { bar.classList.remove('show'); }
+    });
+  }, {threshold:0});
+  io.observe(hero);
+
+  function flashCopied(btnId, label){
+    const btn = document.getElementById(btnId);
+    const original = btn.textContent;
+    btn.textContent = '已複製 ✓';
+    btn.classList.add('copied');
+    setTimeout(()=>{ btn.textContent = original; btn.classList.remove('copied'); }, 1800);
+  }
+
+  function copyText(text, btnId){
+    navigator.clipboard.writeText(text).then(()=>flashCopied(btnId));
+  }
+
+  function copyFormat(){
+    const text = document.getElementById('formatBox').innerText;
+    navigator.clipboard.writeText(text).then(()=>flashCopied('copyFormat'));
+  }
+</script>
+
+</body>
+</html>
